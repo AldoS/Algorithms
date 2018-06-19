@@ -1,7 +1,6 @@
 <?php
 
 function fibonacci($n) {
-    // Write your code here.
     if($n<=1)
         return $n;
     else
@@ -11,7 +10,6 @@ function fibonacci($n) {
 $n = 3;
 
 printf("%d", fibonacci($n));
-
 printf("<br>%f", 3.5*3);
 
- ?>
+?>
