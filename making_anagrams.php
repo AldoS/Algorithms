@@ -1,5 +1,6 @@
 <?php
 
+//demo strings for testing
 $a="fcrxzwscanmligyxyvym";
 $b="jxwtrhvujlmrpdoqbisbwhmgpmeoke";
 
@@ -10,21 +11,11 @@ $cntA = count($arrA);
 $cntB = count($arrB);
 $delCnt=0;
 
-
-
-//$result = array_diff($arrA, $arrB);
-//print_r($result);
-
 for($i=0;$i<$cntA;$i++)
 {
-    //$tmpA = $valCntA[$arrA[$i]];
-    //$tmpB = $valCntB[$arrA[$i]];
-
-    //$runnow = $arrA[$i];
     $key = in_array($arrA[$i],$arrB);
     if(!$key)
     {
-        //$delCnt += $tmpA;
         $delCnt++;
         unset($arrA[$i]);
     }
@@ -40,11 +31,6 @@ for($i=0;$i<$cntA;$i++)
           unset($arrA[$i]);
         }
     }
-    /*else if($tmpA > 1 && $tmpA > $tmpB)
-    {
-      unset($arrA[$i]);
-      $delCnt++;
-    }*/
 }
 for($i=0;$i<$cntB;$i++)
 {
