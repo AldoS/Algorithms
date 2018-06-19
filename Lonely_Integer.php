@@ -1,9 +1,9 @@
 <?php
 
+//example array for testing
 $a = array(4, 9, 95, 93, 57, 4, 57, 93, 9);
-
 $inArr = array();
-//$ourKey=0;
+
 foreach($a as $val)
 {
     if(array_key_exists($val, $inArr))
