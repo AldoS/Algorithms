@@ -1,13 +1,12 @@
 <?php
 
+//example array for testing
 $arr = array(1,3,7);
 $s = count($arr);
 $cnt=0;
+
 for($i=0;$i<$s;$i++)
 {
-    //step 1
-    //step 2
-    //step 3
     echo getCombinations($arr[$i])."<br>";
 }
 
