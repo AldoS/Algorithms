@@ -1,11 +1,16 @@
 <?php
 
+/*
+    Implement a function meetingPlanner that given the availability,
+    slotsA and slotsB, of two people and a meeting duration dur, returns
+    the earliest time slot that works for both of them and is of duration dur.
+    If there is no common time slot that satisfies the duration requirement, return null
+ */
+
 function meetingPlanner($slotsA, $slotsB, $dur) {
-    // your code goes here
-  print_r($slotsA);
-  echo "dfgdf";
   sort($slotsA);
   sort($slotsB);
+  
   for($i=0;$i<count($slotsA);$i++)
   {
     $tmpDurA = $slotsA[$i][1] - $slotsA[$i][0];
