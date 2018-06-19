@@ -1,10 +1,11 @@
 <?php
 
+//demo array for testing
 $array = array(2, 3, 1, 5, 4);
 
 quicksort($array, 0, count($array) - 1);
 
-function quicksort($array, $left, $right){
+function quicksort($array, $left, $right) {
   if($left >= $right)
     return;
   $pivot = $array[($left + $right) / 2];
@@ -15,13 +16,13 @@ function quicksort($array, $left, $right){
   var_dump($array);
 }
 
-function partition(&$array, $left, $right, $pivot){
-  while($left <= $right){
-    while($array[$left] < $pivot){
+function partition(&$array, $left, $right, $pivot) {
+  while($left <= $right) {
+    while($array[$left] < $pivot) {
       $left++;
     }
 
-    while($array[$right] > $pivot){
+    while($array[$right] > $pivot) {
       $right--;
     }
 
@@ -34,10 +35,10 @@ function partition(&$array, $left, $right, $pivot){
   return $left;
 }
 
-function swap(&$x,&$y){
+function swap(&$x,&$y) {
     $tmp=$x;
     $x=$y;
     $y=$tmp;
 }
 
- ?>
+?>
