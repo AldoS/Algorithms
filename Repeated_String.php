@@ -1,13 +1,12 @@
 <?php
 
+//example str for testing
 $s = "aba";
 $n = 10;
 echo repeatedString($s, $n);
 
 function repeatedString($s, $n) {
-    // Complete this function
     $cnt = substr_count($s,"a");
-    //echo $cnt."\n";
     $vDiv = floor($n/strlen($s));
     $vMod = $n % strlen($s);
     $cnt = $cnt*$vDiv;
@@ -18,4 +17,5 @@ function repeatedString($s, $n) {
     }
     return $cnt;
 }
+
 ?>
