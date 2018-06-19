@@ -1,5 +1,6 @@
 <?php
 
+//examples arrays for testing
 $c = array(0,0,1,0,0,1,0,0,0,1,0,0,1,0,0,0,1,0,0,1,0,0,0,1,0,0,1,0,0,0,1,0,0,1,0);
 $c = array(0,0,0,1,0,0);
 $c = array(0,0,1,0,0,1,0);
@@ -7,10 +8,6 @@ $c = array(0,0,1,0,0,1,0);
 echo jumpingOnClouds($c);
 
 function jumpingOnClouds($c) {
-    // Complete this function
-    /*
-    0 0 1 0 0 1 0
-    */
     $steps = 0;
     $n=count($c);
     $i=0;
