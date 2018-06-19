@@ -24,4 +24,4 @@ function solve($n, $s, $d, $m) {
     echo $cnt;
 }
 
- ?>
+?>
