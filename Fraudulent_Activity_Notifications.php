@@ -4,14 +4,9 @@ $expenditure = array(2,3,4,2,3,6,8,4,5);
 $d = 5;
 $n = 9;
 
-echo activityNotifications($expenditure, $d, $n);
-
 function activityNotifications($expenditure, $d, $n) {
-    // Complete this function
     $nots = 0;
     $median = 0;
-
-
 
     for($i=$d;$i<$n;$i++)
     {
@@ -20,7 +15,7 @@ function activityNotifications($expenditure, $d, $n) {
         {
             array_push($mArr,$expenditure[$j]);
         }
-        //sort($mArr);
+        
         $ia=1;
         while($ia<5)
         {
@@ -34,36 +29,6 @@ function activityNotifications($expenditure, $d, $n) {
         if($expenditure[$i] >= 2*$median)
             $nots++;
     }
-
-    /*$mArr = array();
-    for($i=0;$i<$d;$i++)
-    {
-        array_push($mArr,$expenditure[$i]);
-    }
-
-    for($i=$d;$i<$n;$i++)
-    {
-        $nextNum = $expenditure[$i];
-        //sort($mArr);
-
-        $tmp = $nextNum;
-        while($tmp < $d && $expenditure[$tmp] < $expenditure[$tmp+1])
-        while($j=0;$j)
-        {
-          swap($tmp, $expenditure[$tmp]);
-        }
-
-        $median = calculate_median($mArr,$d);
-
-        if($expenditure[$i] >= 2*$median)
-            $nots++;
-
-        //next array
-        array_pop($mArr);
-        array_push($mArr,$nextNum);
-    }*/
-
-
     return $nots;
 }
 
@@ -74,11 +39,10 @@ function swap(&$x,&$y) {
 }
 
 function calculate_median($arr, $count) {
-    //$count = count($arr); //total numbers in array
-    $middleval = floor(($count-1)/2); // find the middle value, or the lowest middle value
-    if($count % 2) { // odd number, middle is the median
+    $middleval = floor(($count-1)/2);       // find the middle value, or the lowest middle value
+    if($count % 2) {                        // odd number, middle is the median
         $median = $arr[$middleval];
-    } else { // even number, calculate avg of 2 medians
+    } else {                                // even number, calculate avg of 2 medians
         $low = $arr[$middleval];
         $high = $arr[$middleval+1];
         $median = (($low+$high)/2);
