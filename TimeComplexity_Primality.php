@@ -1,6 +1,7 @@
 <?php
 
 $str = "";
+
 for($a0 = 0; $a0 < $p; $a0++){
     fscanf($handle,"%d",$n);
     if($str != "")
