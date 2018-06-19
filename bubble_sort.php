@@ -1,10 +1,12 @@
 <?php
 
+//demo array for testing
 $a = array(1, 2, 3);
 
 $cnt = count($a);
 $swps = 0;
 $sorted = false;
+
 for($i=0;$i<$cnt;$i++)
 {
     $sorted=true;
@@ -23,11 +25,10 @@ for($i=0;$i<$cnt;$i++)
 }
 echo "Array is sorted in ".$swps." swaps.\nFirst Element: ".$a[0]."\nLast Element: ".$a[$cnt-1];
 
-
 function swap(&$x,&$y) {
     $tmp=$x;
     $x=$y;
     $y=$tmp;
 }
 
- ?>
+?>
